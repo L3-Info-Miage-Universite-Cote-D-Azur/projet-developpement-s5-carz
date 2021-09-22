@@ -8,7 +8,6 @@
     <artifactId>Carcassonne</artifactId> <!-- et le nom du projet -->
     <version>1.0</version>
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- éventuellement à changer : encodage de vos fichiers -->
         <compiler.source>17</compiler.source> <!-- éventuellement à changer : version de java (sdk) utilisée pour le développement -->
