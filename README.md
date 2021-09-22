@@ -10,11 +10,17 @@ proposition :
 - "définir un meeple"
 
 (a) En tant que joueur, je peux poser une tuile afin de jouer mon tour de jeu
+
 (b) En tant que joueur, je peux poser un meeple sur la tuile que je viens de poser afin de marquer des points
+
 (c) En tant que joueur, je peux terminer une zone afin de marquer des points (ou pas)
+
 (d) En tant que joueur, je peux récupérer un meeple lorsque la zone est terminée afin de marquer des points
+
 (e) En tant que joueur, je peux choisir la zone où poser un meeple sur la tuile que je viens de poser afin de suivre une stratégie
+
 (f) En tant que joeur, je peux choisir l'orientation de la tuile que je pose afin de pouvoir la poser
+
 (g) En tant que joeur, je peux choisir l'orientation de la tuile que je pose afin de suivre une stratégie
 
 
