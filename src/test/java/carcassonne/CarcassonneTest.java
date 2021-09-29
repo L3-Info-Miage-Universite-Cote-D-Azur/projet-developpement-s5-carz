@@ -2,6 +2,7 @@ package carcassonne;
 
 import carcassonne.elements.Coordonnees;
 import carcassonne.joueur.Joueur;
+import carcassonne.vue.AfficheMessage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -21,9 +22,12 @@ class CarcassonneTest {
     @Mock
     Joueur michel;
 
+    @Mock
+    AfficheMessage vue;
+
     @BeforeEach
     public void initTest() {
-        objetDuTest = new Carcassonne();
+        objetDuTest = new Carcassonne(vue);
     }
 
     @Test

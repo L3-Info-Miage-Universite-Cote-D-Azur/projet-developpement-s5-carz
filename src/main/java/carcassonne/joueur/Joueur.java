@@ -19,6 +19,13 @@ public class Joueur {
         return nom;
     }
 
+    @Override
+    public String toString() {
+        return "Joueur{" +
+                "nom='" + nom + '\'' +
+                '}';
+    }
+
     public Coordonnees placer(Tuile t, Plateau plateau) {
         // @todo faire un choix de coordonnées -> IA !
         return new Coordonnees(0,0);
