@@ -1,14 +1,25 @@
 package carcassonne;
 
+import carcassonne.elements.Coordonnees;
 import carcassonne.joueur.Joueur;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 class CarcassonneTest {
 
     Carcassonne objetDuTest ;
+
+    @Mock
+    Joueur michel;
 
     @BeforeEach
     public void initTest() {
@@ -20,9 +31,13 @@ class CarcassonneTest {
         assertFalse(objetDuTest.getFini());
         objetDuTest.seDérouler();
         assertFalse(objetDuTest.getFini());
-        objetDuTest.addJoueur(new Joueur("Michel"));
+
+        when(michel.placer(any(), eq((objetDuTest.getPlateau())))).thenReturn(new Coordonnees(1,1));
+        objetDuTest.addJoueur(michel);
+
         objetDuTest.seDérouler();
         assertTrue(objetDuTest.getFini());
+        assertEquals(1, objetDuTest.getPlateau().getNombreTuilePlacées(), "une tuile a été placé");
     }
 
     @Test

@@ -1,5 +1,9 @@
 package carcassonne.joueur;
 
+import carcassonne.elements.Coordonnees;
+import carcassonne.elements.Plateau;
+import carcassonne.elements.Tuile;
+
 public class Joueur {
     private String nom;
 
@@ -13,5 +17,10 @@ public class Joueur {
 
     public String getNom() {
         return nom;
+    }
+
+    public Coordonnees placer(Tuile t, Plateau plateau) {
+        // @todo faire un choix de coordonnées -> IA !
+        return new Coordonnees(0,0);
     }
 }

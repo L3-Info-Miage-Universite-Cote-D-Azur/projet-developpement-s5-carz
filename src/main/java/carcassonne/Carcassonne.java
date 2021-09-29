@@ -1,5 +1,8 @@
 package carcassonne;
 
+import carcassonne.elements.Coordonnees;
+import carcassonne.elements.Plateau;
+import carcassonne.elements.Tuile;
 import carcassonne.joueur.Joueur;
 
 import java.util.ArrayList;
@@ -13,9 +16,11 @@ public class Carcassonne {
 
     boolean fini ;
     private ArrayList<Joueur> listeDeJoueurs;
+    private Plateau plateau;
 
     public Carcassonne() {
         setFini(false);
+        setPlateau(new Plateau());
         listeDeJoueurs = new ArrayList<>();
     }
 
@@ -34,6 +39,13 @@ public class Carcassonne {
      */
     public void seDérouler() {
         if (listeDeJoueurs.size() > 0) {
+            for(Joueur j : listeDeJoueurs){
+                Tuile t = new Tuile();
+                // @todo triche possible car le joueur peut modifier le plateau
+                Coordonnees placement = j.placer(t, getPlateau());
+                // @todo verification du placement
+                getPlateau().ajouterTuile(placement, t);
+            }
             setFini(true);
         }
     }
@@ -62,4 +74,11 @@ public class Carcassonne {
     }
 
 
+    public void setPlateau(Plateau plateau) {
+        this.plateau = plateau;
+    }
+
+    public Plateau getPlateau() {
+        return plateau;
+    }
 }
