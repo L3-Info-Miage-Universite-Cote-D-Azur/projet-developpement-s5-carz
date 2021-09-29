@@ -9,6 +9,10 @@ public class Plateau {
 
     private HashMap<Coordonnees, Tuile> tuiles = new HashMap<>();
 
+    public int getNombreTuilePlacées() {
+        return tuiles.size();
+    }
+
 
     /**
      * tentative d'ajout d'une tuile à l'emplacement (x,y).
@@ -23,7 +27,7 @@ public class Plateau {
     }
 
     public boolean ajouterTuile(Coordonnees coord, Tuile t) {
-        boolean resultat = (tuiles.get(coord) == null);
+        boolean resultat = (coord != null) && (tuiles.get(coord) == null);
 
         if (resultat) {
             // @todo vérifier si les tuiles sont compatibles

@@ -29,6 +29,8 @@ class PlateauTest {
         Coordonnees coord = new Coordonnees(0,0);
         Tuile t = new Tuile();
 
+        assertFalse(plateauTesté.ajouterTuile(null, t));
+
         assertTrue(plateauTesté.ajouterTuile(coord, t));
         Tuile t2 = new Tuile();
         assertFalse(plateauTesté.ajouterTuile(coord, t2));
