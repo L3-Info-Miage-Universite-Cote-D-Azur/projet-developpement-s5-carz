@@ -47,7 +47,7 @@ public class Carcassonne {
             for(Joueur j : listeDeJoueurs){
                 Tuile t = new Tuile();
                 // @todo triche possible car le joueur peut modifier le plateau
-                Coordonnees placement = j.placer(t, getPlateau());
+                Coordonnees placement = j.choisirPlacementDeLaTuile(t, getPlateau());
                 getVue().afficher(j+" place la tuile à "+placement);
                 // @todo verification du placement
                 getPlateau().ajouterTuile(placement, t);

@@ -36,7 +36,8 @@ class CarcassonneTest {
         objetDuTest.seDérouler();
         assertFalse(objetDuTest.getFini());
 
-        when(michel.placer(any(), eq((objetDuTest.getPlateau())))).thenReturn(new Coordonnees(1,1));
+        // when(michel.placer(any(), any()))).thenReturn(new Coordonnees(1,1));
+        when(michel.choisirPlacementDeLaTuile(any(), eq((objetDuTest.getPlateau())))).thenReturn(new Coordonnees(1,1));
         objetDuTest.addJoueur(michel);
 
         objetDuTest.seDérouler();
