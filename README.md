@@ -33,6 +33,8 @@ pour l'instant :
 - il y a un seul joueur
 - il n'y a pas de pioche
 
+# exemple de découpage 
+
 itération 1
 - a + c => je pose une tuile, où ? => "IA"
 
@@ -47,8 +49,12 @@ itération 3
 - etc.
 
 itération 4
+
 itération 5
+
 itération 6
+
 itération 7
+
 itération 8
 - carcassone en entier avec des IAs, 500 parties, etc.
