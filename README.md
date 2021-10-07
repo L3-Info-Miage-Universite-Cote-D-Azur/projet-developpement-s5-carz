@@ -3,7 +3,7 @@ projet-developpement-s5-carz created by GitHub Classroom
 
 # travail sur le découpage fait en classe 
 
-proposition : 
+propositions faites par les étudiant·e·s en cours : 
 - "définir le champs"
 - "poser une tuile"
 - "définir la tuile"
